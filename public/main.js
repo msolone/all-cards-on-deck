@@ -1,13 +1,8 @@
-// const main = () => {
-//   document.querySelector('h1').textContent += '?'
-// }
-
-// document.addEventListener('DOMContentLoaded', main)
-
 
 const suit = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
 const rank = ['Ace', '2','3','4','5','6','7','8','9','10','Jack','Queen','King']
 const deck = []
+const discardPile = []
 
 const createDeckOfCard = () => { 
 // Creates Ordered Deck
@@ -25,15 +20,15 @@ for (i = 0; i < deck.length; i++) {
 }
 }
 
-
-
 const drawCard = () => {
   console.log(deck[deck.length - 1])
-  const dealtCard = deck.pop()
-  console.log(dealtCard, deck.length)
   const newLi = document.createElement('li')
-  newLi.textContent = deck[i]
-  document.querySelector('dealt-card').appendChild(newLi)
+  newLi.textContent = deck.pop()
+  document.querySelector('.dealt-card').appendChild(newLi)
+  const newLi2 = document.createElement('li')
+  newLi2.textContent = deck.pop()
+  document.querySelector('.dealt-card2').appendChild(newLi2)
+  console.log(deck.length)
 } 
 
 

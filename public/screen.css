@@ -44,4 +44,25 @@ body {
   background-image: url('https://bit.ly/2AxIoai');
   background-size: cover;
   background-repeat: no-repeat;
+  padding-right: 3em;
+}
+
+.dealt-card {
+  color: white;
+  list-style: none;
+  font-size: 2em;
+}
+
+.dealt-card2 {
+  color: white;
+  list-style: none;
+  font-size: 2em;
+}
+
+p1 {
+  text-decoration: underline;
+}
+
+p2 {
+  text-decoration: underline;
 }
