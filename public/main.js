@@ -48,9 +48,21 @@ const dealCards = () => {
 
 const playCard = () => {
   console.log('it works')
+  const newLi = document.createElement('li')
+  newLi.textContent = playerOneHand.pop()
+  document.querySelector('.dealt-card').appendChild(newLi)
+}
+
+const playCard2 = () => {
+  console.log('it works')
+  const newLi = document.createElement('li')
+  newLi.textContent = playerTwoHand.pop()
+  document.querySelector('.dealt-card2').appendChild(newLi)
+
 }
 
 document.addEventListener('DOMContentLoaded', createDeckOfCard)
 // document.querySelector('.deck-of-cards').addEventListener('click', drawCard)
 document.querySelector('.deal').addEventListener('click', dealCards)
 document.querySelector('.deck-of-cards').addEventListener('click', playCard)
+document.querySelector('.deck-of-cards2').addEventListener('click', playCard2)
