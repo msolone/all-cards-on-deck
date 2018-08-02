@@ -37,9 +37,11 @@ for (i = 0; i < deck.length; i++) {
 const dealCards = () => {
   for (i = 1; i < 53; i++) {
     if (i % 2 == 0) {
+      // If index is even add to player 2s hand
       playerTwoHand.push(deck[deck.length - 1])
       deck.pop()
       } else {
+        // if index is odd add to player 1s hand
         playerOneHand.push(deck[deck.length - 1])
         deck.pop()
       }
@@ -51,6 +53,7 @@ const playCard = () => {
   const newLi = document.createElement('li')
   newLi.textContent = playerOneHand.pop()
   document.querySelector('.dealt-card').appendChild(newLi)
+
 }
 
 const playCard2 = () => {

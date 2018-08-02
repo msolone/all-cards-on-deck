@@ -1,5 +1,13 @@
+## Game of War Requirements
 
-
-- [ ] shuffle deck on page load
-- [ ] create face down deck
-- [ ] when deck is clicked deal one card
+- [X] shuffle deck on page load
+- [X] deal cards to player 1 and 2
+- [X] play one card from player 1 and 2s hands
+- [ ] determine and display winner
+- [ ] add 'War' feature when cards have same value
+- [ ] add cards to winners discard pile
+- [ ] remove last card results from DOM
+- [ ] reshuffle discard pile in deck when deck runs out                 <!-- when the playerOneHand = []
+            playerOneHand.push.apply(playerOneHand, discard)
+            discard = [] -->
+- [ ] display match winner when one player runs out of cards
