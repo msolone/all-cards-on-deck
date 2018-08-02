@@ -19,7 +19,7 @@ for (i = 0; i < deck.length; i++) {
   deck[j] = temp
 }
 }
-
+// draw 2 cards   
 const drawCard = () => {
   console.log(deck[deck.length - 1])
   const newLi = document.createElement('li')
