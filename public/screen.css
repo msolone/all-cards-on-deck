@@ -33,6 +33,7 @@ body {
 .main {
   display: flex;
   padding: 2em;
+  justify-content: space-around;
 }
 
 .deal {
@@ -68,14 +69,14 @@ body {
 .deck-of-cards2 {
   font-weight: bold;
   color: white;
-  margin: 2em;
+  margin: 2em 2em 2em 3em;
   font-size: 2em;
   height: 7em;
   width: 5em;
   background-image: url('https://bit.ly/2AvNYKd');
   background-size: cover;
   background-repeat: no-repeat;
-  padding-right: 3em;
+  padding-left: 3em;
 }
 
 p1 {
