@@ -3,6 +3,8 @@ const suit = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
 const rank = ['Ace', '2','3','4','5','6','7','8','9','10','Jack','Queen','King']
 const deck = []
 const discardPile = []
+const playerOneHand = []
+const playerTwoHand = []
 
 const createDeckOfCard = () => { 
 // Creates Ordered Deck
@@ -20,20 +22,35 @@ for (i = 0; i < deck.length; i++) {
 }
 }
 // draw 2 cards   
-const drawCard = () => {
-  console.log(deck[deck.length - 1])
-  const newLi = document.createElement('li')
-  newLi.textContent = deck.pop()
-  document.querySelector('.dealt-card').appendChild(newLi)
-  const newLi2 = document.createElement('li')
-  newLi2.textContent = deck.pop()
-  document.querySelector('.dealt-card2').appendChild(newLi2)
-  console.log(deck.length)
-} 
+// const drawCard = () => {
+//   console.log(deck[deck.length - 1])
+//   const newLi = document.createElement('li')
+//   newLi.textContent = deck.pop()
+//   document.querySelector('.dealt-card').appendChild(newLi)
+//   const newLi2 = document.createElement('li')
+//   newLi2.textContent = deck.pop()
+//   document.querySelector('.dealt-card2').appendChild(newLi2)
+//   console.log(deck.length)
+// } 
 
 
+const dealCards = () => {
+  for (i = 1; i < 53; i++) {
+    if (i % 2 == 0) {
+      playerTwoHand.push(deck[deck.length - 1])
+      deck.pop()
+      } else {
+        playerOneHand.push(deck[deck.length - 1])
+        deck.pop()
+      }
+  }
+}
 
-
+const playCard = () => {
+  console.log('it works')
+}
 
 document.addEventListener('DOMContentLoaded', createDeckOfCard)
-document.querySelector('.deck-of-cards').addEventListener('click', drawCard)
+// document.querySelector('.deck-of-cards').addEventListener('click', drawCard)
+document.querySelector('.deal').addEventListener('click', dealCards)
+document.querySelector('.deck-of-cards').addEventListener('click', playCard)
